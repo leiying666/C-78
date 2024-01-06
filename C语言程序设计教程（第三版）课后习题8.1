@@ -1,0 +1,25 @@
+#include<stdio.h>
+int GY(int a, int b)
+{
+	int c = 1;
+	while (c)
+	{
+		c = a % b;
+		a = b;
+		b = c;
+	}
+	printf("%d ", a);
+	return a;
+}
+void GB(int a, int b, int tmp)
+{
+	printf("%d", a * b / tmp);
+}
+int main()
+{
+	int a, b;
+	scanf("%d%d", &a, &b);
+	int tmp=GY(a, b);
+	GB(a, b,tmp);
+	return 0;
+}
